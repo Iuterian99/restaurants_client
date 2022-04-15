@@ -5,6 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import TopHeader from "./components/header/header";
 import Types from "./components/rest_types/types";
 import RESTAURANTS from "./components/restaurants/restaurants";
+import Branches from "./components/Restaurant_braches/Branches.jsx";
 function App() {
   return (
     <>
@@ -19,6 +20,9 @@ function App() {
             </Route>
             <Route path="/type/:id">
               <RESTAURANTS />
+            </Route>
+            <Route path="/branches/:id">
+              <Branches />
             </Route>
           </Switch>
         </div>

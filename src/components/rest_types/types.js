@@ -15,7 +15,7 @@ function Types() {
   const { data, loading, error } = useQuery(RestTypes);
   return (
     <>
-      <ul className="d-flex justify-content-evenly mt-3">
+      <ul className="d-flex justify-content-evenly m-0 p-0 mt-3">
         {loading && <>loading</>}
         {error && <>error</>}
         {data &&
