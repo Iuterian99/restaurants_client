@@ -6,9 +6,10 @@ import TopHeader from "./components/header/header";
 import Types from "./components/rest_types/types";
 import RESTAURANTS from "./components/restaurants/restaurants";
 import Branches from "./components/Restaurant_braches/Branches.jsx";
+import Meals from "./components/Branch_Meals/Meals.jsx";
 function App() {
   return (
-    <>
+    <div className="container-fluid">
       <nav className="bg-dark">
         <TopHeader />
       </nav>
@@ -24,10 +25,13 @@ function App() {
             <Route path="/branches/:id">
               <Branches />
             </Route>
+            <Route path="/meals/:id">
+              <Meals />
+            </Route>
           </Switch>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

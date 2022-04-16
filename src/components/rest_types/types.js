@@ -14,8 +14,8 @@ function Types() {
   const history = useHistory();
   const { data, loading, error } = useQuery(RestTypes);
   return (
-    <>
-      <ul className="d-flex justify-content-evenly m-0 p-0 mt-3">
+    <div className="container">
+      <ul className="d-flex flex-wrap justify-content-evenly m-0 p-0 mt-3">
         {loading && <>loading</>}
         {error && <>error</>}
         {data &&
@@ -25,7 +25,13 @@ function Types() {
               className="list-unstyled border border-success border-2 p-bottom-2 shadow p-3 mb-5 bg-body rounded"
               key={i}
             >
-              <img src={e.type_image} alt="" height="300" width="400" />
+              <img
+                className="img-responsive"
+                src={e.type_image}
+                alt=""
+                height="300"
+                width="400"
+              />
               <div className="bg-dark p-2">
                 <h1 className="text-center mt-3 fw-bold text-light">
                   {e.type_name}
@@ -34,7 +40,7 @@ function Types() {
             </li>
           ))}
       </ul>
-    </>
+    </div>
   );
 }
 

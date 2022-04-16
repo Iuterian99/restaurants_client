@@ -19,7 +19,7 @@ function RESTAURANTS() {
 
   return (
     <>
-      <ul className="d-flex justify-content-evenly m-0 p-0 mt-3">
+      <ul className="d-flex flex-wrap justify-content-evenly m-0 p-0 mt-3">
         {data &&
           data.restaurants.map((e, i) => (
             <li
@@ -28,7 +28,7 @@ function RESTAURANTS() {
               key={i}
             >
               <img src={e.restaurant_image} alt="" height="250" width="300" />
-              <div className="bg-dark">
+              <div className="bg-secondary">
                 <h1 className="text-center mt-3 fw-bold text-light">
                   {e.restaurant_name}
                 </h1>
